@@ -39,6 +39,10 @@ export interface PricingPlan {
   features: string[]
   highlighted?: boolean // Pour mettre en avant un plan
   cta: string // Texte du bouton
+  details?: {
+    included: string[]
+    notIncluded: string[]
+  }
 }
 
 export interface CustomOption {
@@ -142,5 +146,6 @@ export interface SiteConfig {
   email: string
   phone?: string
   location: string
+  siren: string
   social: SocialLink[]
 }

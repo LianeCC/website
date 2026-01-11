@@ -19,14 +19,15 @@ import type {
 // ============================================
 
 export const SITE_CONFIG: SiteConfig = {
-  name: "Liane Coupat",
-  tagline: "Développeuse Web, Apps & Marketing Digital",
+  name: "Liane Coupat Candoulives",
+  tagline: "Site web sur mesure, Apps & Marketing Digital",
   description:
     "Je transforme vos idées en solutions numériques performantes pour vous aider à atteindre vos objectifs et faire grandir votre entreprise en ligne.",
   url: "https://lianecc.com", 
   email: "liane.cptcdl@gmail.com",
   phone: "+33 (0)6 58 10 40 17",
   location: "Aix-en-Provence, France",
+  siren: "993978659",
   social: [
     {
       platform: "LinkedIn",
@@ -63,45 +64,29 @@ export const SERVICES: Service[] = [
     title: "Création de site web",
     description:
       "Des sites vitrines et e-commerce modernes, optimisés pour la performance et le référencement.",
-    tags: ["Vitrine", "site-web", "E-commerce", "Sur-mesure"],
+    tags: ["Vitrine", "E-commerce", "PWA", "Sur-mesure", "Wordpress", "Shopify"],
     detailedDescription:
-      "Je crée des sites web sur-mesure qui reflètent votre identité et convertissent vos visiteurs en clients. Du design à la mise en ligne, en passant par le référencement, je gère l'intégralité du projet.",
+      "Offres JEUNE POUSSE (site vitrine jusqu'à 5 pages) et FLORAISON (site avancé / e-commerce Shopify / PWA). Design personnalisé, responsive, SEO optimisé.",
   },
   {
-    id: "app-web-pwa",
+    id: "app-web",
     icon: "smartphone",
-    title: "Applications Web / PWA",
+    title: "Applications web & outils internes",
     description:
-      "Des applications web progressives rapides et fiables qui fonctionnent sur tous les appareils.",
-    tags: ["Application personnalisée", "Automatisation", "Dashboard", "Outil interne"],
+      "Des applications web sur-mesure pour optimiser vos processus internes et automatiser vos tâches.",
+    tags: ["Dashboard", "Outils métiers", "Automatisations", "API / CRM"],
     detailedDescription:
-      "Développement de Progressive Web Apps pour offrir une expérience utilisateur optimale sur tous les supports.",
+      "Développement d'applications web personnalisées, tableaux de bord, outils métiers internes et connexions API/CRM sur-mesure.",
   },
   {
     id: "marketing-digital",
     icon: "trending_up",
-    title: "Marketing Digital",
+    title: "Marketing Digital & Accompagnement",
     description:
-      "Stratégies SEO et campagnes publicitaires pour augmenter votre visibilité et attirer plus de clients.",
-    tags: ["SEO / rédaction", "Stratégie", "Réseaux sociaux", "Funnels", "Communication", "Conversion", "Ads", "Social media" ],
+      "Accompagnement pour améliorer votre visibilité en ligne et optimiser votre présence digitale.",
+    tags: ["SEO", "Réseaux sociaux", "Outils digitaux", "Stratégie marketing"],
     detailedDescription:
-      "Je vous aide à développer votre présence en ligne grâce à des stratégies de marketing digital sur-mesure et orientées résultats.",
-  },
-  {
-    id: "design-print",
-    icon: "palette",
-    title: "Design & Print",
-    description:
-      "Identité visuelle, pack branding, flyers / affiches, UI/UX",
-    tags: ["Identité visuelle", "Pack branding", "UI/UX"],
-  },
-  {
-    id: "communication",
-    icon: "campaign",
-    title: "Communication",
-    description:
-      "Positionnement, stratégie de marque, conseil global",
-    tags: ["Positionnement", "Stratégie de marque", "Conseil global"],
+      "Formation web & webmarketing : SEO, réseaux sociaux, outils digitaux, stratégie commerciale & marketing. Interventions courtes et ciblées pour vous rendre autonome.",
   },
 ]
 
@@ -111,60 +96,206 @@ export const SERVICES: Service[] = [
 
 export const PRICING_PLANS: PricingPlan[] = [
   {
-    id: "essentiel",
-    name: "Essentiel",
-    price: "990€",
-    priceDetails: "à partir de",
-    description: "Idéal pour les lancements rapides",
+    id: "jeune-pousse",
+    name: "Jeune Pousse",
+    price: "À partir de 990€",
+    priceDetails: "",
+    description: "Site vitrine professionnel, clair et performant jusqu'à 5 pages",
     features: [
-      "Site vitrine jusqu'à 3 pages (Accueil, Nos Services, Contact)",
-      "Design personnalisé",
-      "Optimisation SEO de base",
-      "Mise en ligne",
-      "Support technique dédié 6jours/7"
+      "Site vitrine jusqu'à 5 pages",
+      "Design personnalisé (pas de thème générique)",
+      "Site responsive (mobile, tablette, desktop)",
+      "Optimisation SEO de base (structure & balises)",
+      "Mise en ligne & configuration technique",
+      "1 RDV lancement (45 min) + 1 RDV validation (30 min)",
+      "2 allers-retours sur la maquette",
+      "1 série de corrections mineures après intégration",
+      "Délai : 2 à 5 semaines"
     ],
     highlighted: false,
-    cta: "Choisir ce pack",
+    cta: "Choisir cette offre",
+    details: {
+      included: [
+        "Cadrage du projet & analyse des besoins",
+        "Proposition maquette page d'accueil",
+        "Développement & intégration responsive",
+        "Vérifications finales & recette"
+      ],
+      notIncluded: [
+        "Rédaction complète des contenus",
+        "Création de logo ou identité visuelle",
+        "Fonctionnalités avancées (e-commerce, espace membre)",
+        "Maintenance après mise en ligne (option possible)",
+        "Hébergement et nom de domaine (accompagnement possible)"
+      ]
+    }
   },
   {
-    id: "pro",
-    name: "Pro",
-    price: "2490€",
-    priceDetails: "à partir de",
-    description: "Pour les entreprises qui souhaitent de l'accompagnement",
+    id: "floraison",
+    name: "Floraison",
+    price: "À partir de 2490€",
+    priceDetails: "",
+    description: "Site avancé / e-commerce Shopify / PWA orienté conversion avec UX poussée",
     features: [
-      "Fonctionnalités avancées (Blog, Formulaire avancé, Galerie, etc.)",
-      "Optimisation SEO avancée",
-      "Connexions à d'autres services(CRM, API...)",
-      "Accompagnement & conseils sur la gestion des réseaux sociaux",
-      "Support technique dédié 6jours/7"
+      "Site web avancé ou e-commerce Shopify / PWA",
+      "Architecture sur-mesure",
+      "Design UI/UX personnalisé",
+      "Responsive (mobile / tablette / desktop)",
+      "Optimisation SEO avancée (structure, performances, bonnes pratiques)",
+      "E-commerce : config catalogue, paiements Stripe, livraisons",
+      "Formulaires avancés, connexions API, automatisations simples",
+      "1 RDV cadrage (1h) + 2 RDV suivi (45 min) + 1 RDV livraison (30 min)",
+      "3 allers-retours sur les maquettes",
+      "2 cycles de corrections après développement",
+      "Délai : 6 à 12 semaines"
     ],
-    highlighted: true, // Plan mis en avant
-    cta: "Choisir ce pack",
+    highlighted: true,
+    cta: "Choisir cette offre",
+    details: {
+      included: [
+        "Cadrage stratégique approfondi",
+        "Wireframes (pages clés) + Maquettes UI",
+        "Développement front & back",
+        "Connexions aux outils tiers",
+        "Tests, recette & mise en production"
+      ],
+      notIncluded: [
+        "Création de logo / identité visuelle (option possible)",
+        "Création de contenus (option possible)",
+        "Production vidéo (option possible)",
+        "Maintenance après mise en ligne (option possible)",
+        "Fonctionnalités non prévues au cadrage"
+      ]
+    }
   },
   {
-    id: "premium",
-    name: "Premium",
-    price: "sur devis",
-    description: "Pour les projets sur-mesure et complexes.",
+    id: "applications-web",
+    name: "Applications web & outils internes",
+    price: "Sur devis",
+    priceDetails: "",
+    description: "Applications web sur-mesure pour optimiser vos processus internes",
     features: [
-      "Solution 100% sur-mesure",
-      "Accompagnement stratégique",
-      "Développement complexe",
-      "Maintenance et évolutions",
-      "Support dédié 6jours/7"
-
+      "Dashboards & tableaux de bord",
+      "Outils métiers internes",
+      "Automatisations de processus",
+      "Connexions API / CRM / outils tiers",
+      "Application web sur mesure",
+      "Architecture adaptée au projet",
+      "Front-end moderne (Next.js) + Back-end & logique métier",
+      "Base de données",
+      "Sécurité & gestion des accès",
+      "RDV personnalisés selon projet",
+      "Délai : défini selon complexité"
     ],
     highlighted: false,
-    cta: "Nous contacter",
+    cta: "Demander un devis",
+    details: {
+      included: [
+        "Audit & cadrage fonctionnel",
+        "Conception UX (parcours utilisateurs, wireframes)",
+        "Développement front & back",
+        "Intégrations API / outils tiers",
+        "Tests utilisateurs & mise en production"
+      ],
+      notIncluded: [
+        "Support long terme",
+        "Maintenance évolutive",
+        "Fonctionnalités non prévues au cadrage",
+        "Hébergement & infrastructure (accompagnement possible)"
+      ]
+    }
+  },
+  {
+    id: "formation-accompagnement",
+    name: "Formation & Accompagnement",
+    price: "350€ / forfait 3h",
+    priceDetails: "",
+    description: "Accompagnement personnalisé pour gagner en autonomie sur vos outils digitaux",
+    features: [
+      "3 sessions d'1h (distanciel)",
+      "Sujets au choix : réseaux sociaux & outils, stratégie marketing, stratégie commerciale, etc.",
+      "Formation pratique avec démonstrations",
+      "Plan d'actions personnalisé",
+      "Fiche de synthèse avec recommandations",
+      "Ressources simples à appliquer",
+      "Conseils pour progresser en autonomie",
+      "Réponses à vos questions spécifiques"
+    ],
+    highlighted: false,
+    cta: "Réserver mes 3h",
+    details: {
+      included: [
+        "Cadrage rapide (identification besoins & objectifs)",
+        "3 sessions d'accompagnement pratique (1h chacune)",
+        "Démonstrations sur votre cas concret",
+        "Synthèse & recommandations pour poursuivre seul",
+        "Support par email entre les sessions"
+      ],
+      notIncluded: [
+        "Accompagnement sur le long terme",
+        "Formation complète et structurée sur plusieurs semaines",
+        "Réalisation de contenus ou de campagnes à votre place",
+        "Sessions supplémentaires (possibles avec supplément)"
+      ]
+    }
+  },
+  {
+    id: "marketing-digital",
+    name: "Marketing Digital & Accompagnement",
+    price: "Sur devis",
+    priceDetails: "",
+    description: "Accompagnement pour améliorer votre visibilité en ligne",
+    features: [
+      "SEO (optimisation pour moteurs de recherche)",
+      "Stratégie de contenu",
+      "Réseaux sociaux",
+      "Stratégie commerciale & marketing",
+      "Accompagnement pratique sur outils digitaux",
+      "Conseils pour progresser rapidement",
+      "Plan d'actions personnalisé",
+      "Sessions courtes (distanciel - 1h)",
+      "Fiche de synthèse avec recommandations",
+      "Délai : selon nombre de sessions"
+    ],
+    highlighted: false,
+    cta: "Demander un devis",
+    details: {
+      included: [
+        "Cadrage rapide (identification besoins & objectifs)",
+        "Accompagnement pratique (démonstrations et exercices)",
+        "Synthèse & recommandations pour poursuivre en autonomie",
+        "Ressources simples à appliquer"
+      ],
+      notIncluded: [
+        "Accompagnement sur le long terme",
+        "Formation complète et structurée sur plusieurs semaines",
+        "Réalisation de contenus ou de campagnes à la place du client"
+      ]
+    }
   },
 ]
 
 export const CUSTOM_OPTIONS: CustomOption[] = [
-  { id: "logo", name: "Logo / Identité visuelle" },
-  { id: "social", name: "Gestion de vos réseaux sociaux" },
-  { id: "training", name: "Formation marketing digital" },
-  { id: "print", name: "Création de vos supports (carte de visite, flyers, logo avec éclairage led, etc.)" },
+  {
+    id: "video",
+    name: "Vidéo (via prestataire)",
+    description: "• Captation professionnelle\n• Montage vidéo\n• Contenus pour site web & réseaux sociaux\n• Collaboration avec vidéastes expérimentés"
+  },
+  {
+    id: "graphisme",
+    name: "Graphisme (via prestataire)",
+    description: "• Création de logo\n• Identité visuelle complète\n• Supports print & digitaux\n• Image de marque cohérente"
+  },
+  {
+    id: "maintenance",
+    name: "Maintenance & suivi",
+    description: "• Maintenance technique régulière\n• Mises à jour de sécurité\n• Évolutions fonctionnelles\n• Support continu"
+  },
+  {
+    id: "formation",
+    name: "Formation personnalisée",
+    description: "• Formation sur-mesure\n• Gestion autonome de votre site\n• Maîtrise des contenus\n• Utilisation des outils digitaux"
+  },
 ]
 
 // ============================================
@@ -241,72 +372,57 @@ export const TECH_STACK: TechStack[] = [
   {
     id: "nextjs",
     name: "Next.js",
-    icon: "/images/stack/nextjs.png",
+    icon: "/images/stack/nextjs.svg",
   },
   {
     id: "react",
     name: "React",
-    icon: "/images/stack/react.png",
+    icon: "/images/stack/react.svg",
   },
   {
     id: "nodejs",
     name: "Node.js",
-    icon: "/images/stack/nodejs.png",
+    icon: "/images/stack/nodejs.svg",
   },
   {
     id: "tailwind",
     name: "Tailwind CSS",
-    icon: "/images/stack/tailwind.png",
+    icon: "/images/stack/tailwind.svg",
   },
   {
     id: "postgresql",
     name: "PostgreSQL",
-    icon: "/images/stack/postgresql.png",
+    icon: "/images/stack/postgresql.svg",
   },
   {
     id: "figma",
     name: "Figma",
-    icon: "/images/stack/figma.png",
-  },
-  {
-    id: "vercel",
-    name: "Vercel",
-    icon: "/images/stack/vercel.png",
-  },
-  {
-    id: "render",
-    name: "Render",
-    icon: "/images/stack/render.png",
+    icon: "/images/stack/figma.svg",
   },
   {
     id: "github",
     name: "GitHub",
-    icon: "/images/stack/github.png",
+    icon: "/images/stack/github.svg",
   },
   {
     id: "python",
     name: "Python",
-    icon: "/images/stack/python.png",
+    icon: "/images/stack/python.svg",
   },
   {
     id: "Canva",
     name: "Canva",
-    icon: "/images/stack/canva.png",
+    icon: "/images/stack/canva.svg",
   },
   {
     id: "indesign",
     name: "InDesign",
-    icon: "/images/stack/indesign.png",
-  },
-  {
-    id: "photoshop",
-    name: "Photoshop",
-    icon: "/images/stack/photoshop.png",
+    icon: "/images/stack/indesign.svg",
   },
   {
     id: "affinity",
     name: "Affinity Designer",
-    icon: "/images/stack/affinity.png",
+    icon: "/images/stack/affinity.svg",
   }
 
 
@@ -322,7 +438,7 @@ export const PROJECTS: Project[] = [
     title: "Site web Wedding Planner",
     description:
       "Un site sur-mesure, élégant et fonctionnel pour une organisatrice de mariages, mettant en avant ses services et réalisations. Le site est disponible en anglais & français, avec un accès client dédié et un accès administrateur pour gérer les projets mariés.",
-    image: "/images/projects/vertlemariage.jpg", // À ajouter
+    image: "/images/projects/vertlemariage.png",
     tags: ["Next", "React", "Tailwind", "Calendly", "i18n", "Admin", "Client Access", "SEO"],
     category: "Site sur-mesure",
     link: "www.vertlemariage.com", 
@@ -504,5 +620,41 @@ export const CTA = {
   services: {
     title: "Voir mes services",
     button: "Voir mes services",
+  },
+}
+
+// ============================================
+// PAGES LÉGALES
+// ============================================
+
+export const LEGAL_PAGES = {
+  mentionsLegales: {
+    title: "Mentions Légales",
+    slug: "/legal/mentions-legales",
+  },
+  confidentialite: {
+    title: "Politique de Confidentialité",
+    slug: "/legal/politique-confidentialite",
+  },
+  cgs: {
+    title: "Conditions Générales de Service",
+    slug: "/legal/cgs",
+  },
+}
+
+// Informations légales
+export const LEGAL_INFO = {
+  entreprise: {
+    nom: "LCC", 
+    statut: "Auto-entrepreneur", 
+    siren: "993978659", 
+    adresse: "Lambesc, France",
+    email: SITE_CONFIG.email,
+    phone: SITE_CONFIG.phone,
+  },
+  hebergeur: {
+    nom: "Vercel Inc.",
+    adresse: "440 N Barranca Ave #4133, Covina, CA 91723",
+    site: "https://vercel.com",
   },
 }

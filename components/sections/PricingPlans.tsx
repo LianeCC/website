@@ -38,8 +38,8 @@ export function PricingPlans() {
                 </div>
                 <CardDescription className="mt-2 text-sm sm:text-base">{plan.description}</CardDescription>
               </CardHeader>
-              <CardContent className="flex-1">
-                <ul className="space-y-2 mb-4">
+              <CardContent className="flex-1 flex flex-col">
+                <ul className="space-y-2 mb-4 flex-1">
                   {plan.features.map((feature, index) => (
                     <li key={index} className="flex gap-2 items-start">
                       <span className="text-sm leading-relaxed">{feature}</span>
@@ -49,19 +49,23 @@ export function PricingPlans() {
 
                 {/* Details Section - Collapsible */}
                 {plan.details && (
-                  <div className="mt-6 pt-6 border-t">
+                  <div className="mt-auto pt-6 border-t">
                     <button
                       onClick={() => setExpandedPlan(expandedPlan === plan.id ? null : plan.id)}
                       className="flex items-center justify-between w-full text-sm font-semibold text-primary hover:underline"
                     >
                       <span>Voir les détails</span>
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform ${expandedPlan === plan.id ? 'rotate-180' : ''}`}
+                        className={`w-4 h-4 transition-transform duration-300 ${expandedPlan === plan.id ? 'rotate-180' : ''}`}
                       />
                     </button>
 
-                    {expandedPlan === plan.id && (
-                      <div className="mt-4 space-y-4 text-sm">
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                        expandedPlan === plan.id ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'
+                      }`}
+                    >
+                      <div className="space-y-4 text-sm">
                         {/* Inclus */}
                         <div>
                           <h4 className="font-semibold text-green-600 dark:text-green-500 mb-2 flex items-center gap-2">
@@ -88,7 +92,7 @@ export function PricingPlans() {
                           </ul>
                         </div>
                       </div>
-                    )}
+                    </div>
                   </div>
                 )}
               </CardContent>
@@ -111,7 +115,7 @@ export function PricingPlans() {
           {PRICING_PLANS.slice(2, 5).map((plan) => (
             <Card
               key={plan.id}
-              className={`relative flex flex-col ${plan.highlighted ? "border-primary border-2 shadow-xl" : ""}`}
+              className={`relative flex flex-col bg-white/90 ${plan.highlighted ? "border-primary border-2 shadow-xl" : ""}`}
             >
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
@@ -127,8 +131,8 @@ export function PricingPlans() {
                 </div>
                 <CardDescription className="mt-2 text-sm sm:text-base">{plan.description}</CardDescription>
               </CardHeader>
-              <CardContent className="flex-1">
-                <ul className="space-y-2 mb-4">
+              <CardContent className="flex-1 flex flex-col">
+                <ul className="space-y-2 mb-4 flex-1">
                   {plan.features.map((feature, index) => (
                     <li key={index} className="flex gap-2 items-start">
                       <span className="text-sm leading-relaxed">{feature}</span>
@@ -138,19 +142,23 @@ export function PricingPlans() {
 
                 {/* Details Section - Collapsible */}
                 {plan.details && (
-                  <div className="mt-6 pt-6 border-t">
+                  <div className="mt-auto pt-6 border-t">
                     <button
                       onClick={() => setExpandedPlan(expandedPlan === plan.id ? null : plan.id)}
                       className="flex items-center justify-between w-full text-sm font-semibold text-primary hover:underline"
                     >
                       <span>Voir les détails</span>
                       <ChevronDown
-                        className={`w-4 h-4 transition-transform ${expandedPlan === plan.id ? 'rotate-180' : ''}`}
+                        className={`w-4 h-4 transition-transform duration-300 ${expandedPlan === plan.id ? 'rotate-180' : ''}`}
                       />
                     </button>
 
-                    {expandedPlan === plan.id && (
-                      <div className="mt-4 space-y-4 text-sm">
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                        expandedPlan === plan.id ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'
+                      }`}
+                    >
+                      <div className="space-y-4 text-sm">
                         {/* Inclus */}
                         <div>
                           <h4 className="font-semibold text-green-600 dark:text-green-500 mb-2 flex items-center gap-2">
@@ -177,7 +185,7 @@ export function PricingPlans() {
                           </ul>
                         </div>
                       </div>
-                    )}
+                    </div>
                   </div>
                 )}
               </CardContent>

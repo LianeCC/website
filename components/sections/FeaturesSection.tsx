@@ -12,7 +12,7 @@ export function FeaturesSection() {
           {FEATURES.map((feature, index) => (
             <div
               key={feature.id}
-              className="group flex items-center gap-2 p-4 sm:p-6 rounded-lg transition-all duration-500 ease-out hover:bg-white/80 hover:scale-105 md:hover:scale-[1.2] hover:shadow-2xl hover:z-20 relative"
+              className="group flex items-center gap-2 p-4 sm:p-6 rounded-lg transition-all duration-500 ease-out hover:bg-white/90 hover:scale-105 md:hover:scale-[1.2] hover:shadow-2xl hover:z-20 relative"
             >
 
               <div className="shrink-0 w-16 sm:w-24 md:w-32 flex items-center justify-center">

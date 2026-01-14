@@ -31,7 +31,7 @@ export function MobileMenu() {
           />
 
           {/* Menu qui se déroule */}
-          <nav className="absolute top-16 left-0 right-0 bg-white/90 backdrop-blur-md shadow-xl z-50 lg:hidden border-b border-gray-200">
+          <nav className="absolute top-16 left-0 right-0 bg-white/80 backdrop-blur-md shadow-xl z-50 lg:hidden">
             <div className="flex flex-col py-4">
               {NAV_LINKS.map((link) => (
                 <Link

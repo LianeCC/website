@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
+    <header className="sticky top-0 z-50 w-full bg-white backdrop-blur supports-backdrop-filter:bg-background/80">
       <div className="mx-auto container flex h-16 items-center px-4">
         <Link href="/" className="shrink-0">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-script">

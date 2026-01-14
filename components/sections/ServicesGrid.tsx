@@ -4,16 +4,16 @@ import Link from "next/link"
 
 export function ServicesGrid() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl text-white font-bold mb-4">Mes Services</h2>
-          <p className="text-white text-lg">
+    <section className="py-12 sm:py-16 md:py-20">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-white font-bold mb-3 sm:mb-4">Mes Services</h2>
+          <p className="text-white text-base sm:text-lg px-4">
             Des solutions complètes pour votre présence digitale.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {SERVICES.map((service) => (
             <Card key={service.id} className="hover:shadow-lg transition-shadow bg-white">
               <CardHeader>

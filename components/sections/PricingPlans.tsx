@@ -11,14 +11,14 @@ export function PricingPlans() {
   const [expandedPlan, setExpandedPlan] = useState<string | null>(null)
 
   return (
-    <section className="py-40 text-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Choisissez la formule adaptée à vos besoins</h2>
+    <section className="py-16 sm:py-24 md:py-40 text-white">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 px-4">Choisissez la formule adaptée à vos besoins</h2>
         </div>
 
         {/* Première ligne : 2 cards (Jeune Pousse + Floraison) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto mb-6 sm:mb-8">
           {PRICING_PLANS.slice(0, 2).map((plan) => (
             <Card
               key={plan.id}
@@ -32,11 +32,11 @@ export function PricingPlans() {
                 </div>
               )}
               <CardHeader>
-                <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                <div className="mt-4">
-                  <span className="text-3xl font-bold">{plan.price}</span>
+                <CardTitle className="text-xl sm:text-2xl">{plan.name}</CardTitle>
+                <div className="mt-3 sm:mt-4">
+                  <span className="text-2xl sm:text-3xl font-bold">{plan.price}</span>
                 </div>
-                <CardDescription className="mt-2">{plan.description}</CardDescription>
+                <CardDescription className="mt-2 text-sm sm:text-base">{plan.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-1">
                 <ul className="space-y-2 mb-4">
@@ -107,7 +107,7 @@ export function PricingPlans() {
         </div>
 
         {/* Deuxième ligne : 3 cards (Applications web + Formation + Marketing) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
           {PRICING_PLANS.slice(2, 5).map((plan) => (
             <Card
               key={plan.id}
@@ -121,11 +121,11 @@ export function PricingPlans() {
                 </div>
               )}
               <CardHeader>
-                <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                <div className="mt-4">
-                  <span className="text-3xl font-bold">{plan.price}</span>
+                <CardTitle className="text-xl sm:text-2xl">{plan.name}</CardTitle>
+                <div className="mt-3 sm:mt-4">
+                  <span className="text-2xl sm:text-3xl font-bold">{plan.price}</span>
                 </div>
-                <CardDescription className="mt-2">{plan.description}</CardDescription>
+                <CardDescription className="mt-2 text-sm sm:text-base">{plan.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-1">
                 <ul className="space-y-2 mb-4">

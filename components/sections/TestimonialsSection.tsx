@@ -4,16 +4,16 @@ import Image from "next/image"
 
 export function TestimonialsSection() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl text-white font-bold mb-4">Ce que disent mes clients</h2>
-          <p className="text-white text-lg">
+    <section className="py-12 sm:py-16 md:py-20">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-white font-bold mb-3 sm:mb-4">Ce que disent mes clients</h2>
+          <p className="text-white text-base sm:text-lg px-4">
             La satisfaction de mes clients est ma priorité.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {TESTIMONIALS.map((testimonial) => (
             <Card key={testimonial.id}>
               <CardContent className="pt-6">

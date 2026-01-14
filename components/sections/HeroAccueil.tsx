@@ -9,46 +9,41 @@ interface HeroAccueilProps {
 
 export function HeroAccueil({ scrollProgress, isDesktop }: HeroAccueilProps) {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Fallback gradient pour mobile */}
-      {!isDesktop && (
-        <div className="absolute inset-0 w-full h-full bg-linear-to-b from-[#1a4d3e] to-[#0d2818]" />
-      )}
-
+    <section className="relative min-h-screen flex items-center overflow-hidden py-16 sm:py-20">
       {/* Contenu centré par-dessus la forêt - disparaît en scrollant */}
       <div
-        className="container mx-auto px-4 relative z-10 transition-opacity duration-300"
+        className="container mx-auto px-4 sm:px-6 relative z-10 transition-opacity duration-300"
         style={{ opacity: isDesktop ? 1 - scrollProgress * 1.5 : 1 }}
       >
-        <div className="max-w-6xl mx-auto text-center space-y-8">
+        <div className="max-w-6xl mx-auto text-center space-y-6 sm:space-y-8">
 
-          <h1 className="text-4xl md:text-4xl lg:text-6xl font-script leading-tight text-white drop-shadow-2xl">
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-script leading-tight text-white drop-shadow-2xl">
             {SITE_CONFIG.name}
           </h1>
 
-          <p className="text-2xl md:text-3xl lg:text-4xl text-white font-bold drop-shadow-lg">
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-bold drop-shadow-lg px-2">
             {SITE_CONFIG.tagline}
           </p>
 
-          <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto drop-shadow-lg px-4">
             {SITE_CONFIG.description}
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 pt-8">
-            <Link href="/contact">
-              <Button size="lg" className="text-lg shadow-2xl hover:shadow-primary/50 hover:scale-105 transition-all backdrop-blur-md">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-6 sm:pt-8 px-4">
+            <Link href="/contact" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full sm:w-auto text-base sm:text-lg shadow-2xl hover:shadow-primary/50 hover:scale-105 transition-all backdrop-blur-md">
                 Travaillons ensemble
               </Button>
             </Link>
-            <Link href="/services">
-              <Button size="lg" variant="outline" className="text-lg backdrop-blur-md bg-white/10 hover:bg-white/20 border-white/30 text-white">
+            <Link href="/services" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto text-base sm:text-lg backdrop-blur-md bg-white/10 hover:bg-white/20 border-white/30 text-white">
                 Découvrir mes services
               </Button>
             </Link>
           </div>
 
           {/* Indicateur de scroll */}
-          <div className="pt-12 animate-bounce">
+          <div className="pt-8 sm:pt-12 animate-bounce">
             <svg
               className="w-6 h-6 mx-auto text-white/60"
               fill="none"

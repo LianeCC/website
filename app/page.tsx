@@ -49,6 +49,22 @@ export default function Home() {
         </div>
       )}
 
+      {/* Image de forêt fixe pour mobile sur toute la page */}
+      {!isDesktop && (
+        <div className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none">
+          <div className="absolute inset-0">
+            <img
+              src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3"
+              alt="Forest background"
+              className="w-full h-full object-cover"
+            />
+            {/* Overlay sombre pour rendre le texte lisible */}
+            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 bg-linear-to-b from-[#1a4d3e]/40 to-[#0d2818]/60" />
+          </div>
+        </div>
+      )}
+
       {/* Contenu de la page par-dessus */}
       <div className="relative z-10">
         <ScrollFadeSection>

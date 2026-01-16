@@ -1,19 +1,44 @@
+"use client"
+
 import { SITE_CONFIG } from "@/lib/constants"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react"
 
-interface HeroAccueilProps {
-  scrollProgress: number
-  isDesktop: boolean
-}
+export function HeroAccueil() {
+  const [opacity, setOpacity] = useState(1)
+  const [isDesktop, setIsDesktop] = useState(true)
 
-export function HeroAccueil({ scrollProgress, isDesktop }: HeroAccueilProps) {
+  useEffect(() => {
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth >= 1024)
+    }
+
+    const handleScroll = () => {
+      if (window.innerWidth < 1024) {
+        setOpacity(1)
+        return
+      }
+      const scrollProgress = Math.min(window.scrollY / 3000, 1)
+      setOpacity(1 - scrollProgress * 1.5)
+    }
+
+    checkDesktop()
+    handleScroll()
+    window.addEventListener("resize", checkDesktop)
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("resize", checkDesktop)
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden py-16 sm:py-20">
       {/* Contenu centré par-dessus la forêt - disparaît en scrollant */}
       <div
         className="container mx-auto px-4 sm:px-6 relative z-10 transition-opacity duration-300"
-        style={{ opacity: isDesktop ? 1 - scrollProgress * 1.5 : 1 }}
+        style={{ opacity: isDesktop ? opacity : 1 }}
       >
         <div className="max-w-6xl mx-auto text-center space-y-6 sm:space-y-8">
 
@@ -56,6 +81,7 @@ export function HeroAccueil({ scrollProgress, isDesktop }: HeroAccueilProps) {
               <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
           </div>
+          
         </div>
       </div>
     </section>

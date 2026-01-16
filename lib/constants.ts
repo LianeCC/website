@@ -240,7 +240,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     }
   },
   {
-    id: "marketing-digital",
+    id: "marketing-digital-accompagnement",
     name: "Marketing Digital & Accompagnement",
     price: "Sur devis",
     priceDetails: "",
@@ -420,12 +420,90 @@ export const TECH_STACK: TechStack[] = [
     icon: "/images/stack/indesign.svg",
   },
   {
-    id: "affinity",
-    name: "Affinity Designer",
-    icon: "/images/stack/affinity.svg",
+    id: "django",
+    name: "Django",
+    icon: "/images/stack/django.svg",
+  },
+  {
+    id: "vite",
+    name: "Vite",
+    icon: "/images/stack/vite.svg",
+  },
+  {
+    id: "render",
+    name: "Render",
+    icon: "/images/stack/render.svg",
+  },
+  {
+    id: "vercel",
+    name: "Vercel",
+    icon: "/images/stack/vercel.svg",
+  },
+  {
+    id: "typescript",
+    name: "TypeScript",
+    icon: "/images/stack/typescript.svg",
+  },
+  {
+    id: "shopify",
+    name: "Shopify",
+    icon: "/images/stack/shopify.svg",
+  },
+  {
+    id: "wordpress",
+    name: "WordPress",
+    icon: "/images/stack/wordpress.svg",
+  },
+  {
+    id: "mongodb",
+    name: "MongoDB",
+    icon: "/images/stack/mongodb.svg",
+  },
+  {
+    id: "mysql",
+    name: "MySQL",
+    icon: "/images/stack/mysql.svg",
+  },
+  {
+    id: "google-analytics",
+    name: "Google Analytics",
+    icon: "/images/stack/google-analytics.svg",
+  },
+  {
+    id: "google-search-console",
+    name: "Search Console",
+    icon: "/images/stack/google-search-console.svg",
+  },
+  {
+    id: "brevo",
+    name: "Brevo",
+    icon: "/images/stack/brevo.svg",
+  },
+  {
+    id: "notion",
+    name: "Notion",
+    icon: "/images/stack/notion.svg",
+  },
+  {
+    id: "airtable",
+    name: "Airtable",
+    icon: "/images/stack/airtable.svg",
+  },
+  {
+    id: "docker",
+    name: "Docker",
+    icon: "/images/stack/docker.svg",
+  },
+  {
+    id: "claude",
+    name: "Claude.Code",
+    icon: "/images/stack/claude.svg",
+  },
+  {
+    id: "supabase",
+    name: "Supabase",
+    icon: "/images/stack/supabase.svg",
   }
-
-
 ]
 
 // ============================================
@@ -547,6 +625,48 @@ export const FAQ: FAQItem[] = [
     answer:
       "Je propose un accompagnement personnalisé tout au long du projet avec des points réguliers, une communication transparente, et un suivi après livraison. Je suis également disponible pour des formations sur la gestion de votre site.",
   },
+  {
+    id: "6",
+    question: "Dois-je fournir les textes et images pour mon site ?",
+    answer:
+      "Idéalement oui, car vous connaissez mieux que quiconque votre activité et vos clients. Cependant, je peux vous accompagner dans la rédaction de vos contenus et vous conseiller sur les visuels à utiliser. Si besoin, je peux également vous orienter vers des banques d'images professionnelles ou des prestataires pour la création de contenus.",
+  },
+  {
+    id: "7",
+    question: "Mon site sera-t-il optimisé pour le référencement (SEO) ?",
+    answer:
+      "Oui, l'optimisation SEO est incluse dans toutes mes offres. Je m'assure que votre site respecte les bonnes pratiques techniques (structure, balises, vitesse de chargement, responsive) et je vous conseille sur les contenus pour améliorer votre visibilité sur les moteurs de recherche.",
+  },
+  {
+    id: "8",
+    question: "Puis-je modifier mon site moi-même après la livraison ?",
+    answer:
+      "Absolument ! Je vous livre un site dont vous êtes entièrement propriétaire. Selon la solution choisie, vous aurez accès à une interface d'administration simple pour modifier vos contenus. Je propose également des formations pour vous rendre autonome sur la gestion de votre site.",
+  },
+  {
+    id: "9",
+    question: "Travaillez-vous uniquement avec des clients locaux ?",
+    answer:
+      "Non, je travaille avec des clients partout en France et même à l'international. Tous nos échanges peuvent se faire en visioconférence, par téléphone ou par email. La distance n'est jamais un frein à une collaboration réussie.",
+  },
+  {
+    id: "10",
+    question: "Que se passe-t-il si je ne suis pas satisfait du résultat ?",
+    answer:
+      "Ma méthode de travail inclut plusieurs points de validation tout au long du projet pour éviter les mauvaises surprises. Vous validez les maquettes avant le développement, puis des corrections sont prévues après l'intégration. Mon objectif est que vous soyez 100% satisfait du résultat final.",
+  },
+  {
+    id: "11",
+    question: "L'hébergement et le nom de domaine sont-ils inclus ?",
+    answer:
+      "L'hébergement et le nom de domaine ne sont pas inclus dans mes offres, mais je vous accompagne dans leur choix et leur configuration. Je peux vous recommander des solutions adaptées à vos besoins et à votre budget, et m'occuper de la mise en place technique.",
+  },
+  {
+    id: "12",
+    question: "Proposez-vous des facilités de paiement ?",
+    answer:
+      "Oui, je propose un paiement échelonné pour tous mes services. Selon le montant du projet, le paiement peut être divisé en 2 ou 3 fois. N'hésitez pas à me contacter pour discuter des modalités adaptées à votre situation.",
+  },
 ]
 
 // ============================================
@@ -557,20 +677,65 @@ export const ABOUT_PAGE = {
   hero: {
     title: "En savoir plus sur moi",
     description:
-      "Ma vision est de créer des expériences web performantes et intuitives qui apportent une valeur réelle à mes clients et à leurs utilisateurs.",
+      "Une approche humaine du web, orientée service, clarté et efficacité.",
   },
+
   bio: {
     title: "Mon parcours et mes valeurs",
-    description:
-      "Spécialisée dans la création d'applications web modernes et de PWA, j'allie une expertise technique pointue avec une approche marketing stratégique pour garantir des résultats mesurables. Ma mission est de transformer vos idées en solutions numériques robustes et efficaces, en privilégiant toujours la collaboration, la qualité et la transparence.",
-    expertise: {
-      title: "Expertise Technique & Marketing",
-      description:
-        "Du développement front-end avec React et Next.js à la stratégie SEO, en passant par la conception d'interfaces sur Figma, je couvre l'ensemble du cycle de vie de votre projet pour vous livrer une solution clé en main.",
-    },
+    introduction:
+      "Je suis développeuse web et consultante en marketing digital, et surtout une professionnelle du service et de l’accompagnement.",
+
+    mission:
+      "Mon rôle ne se limite pas à créer un site web. J’aide les entrepreneurs, indépendants, TPE et commerces locaux à y voir clair dans le digital et à mettre en place des outils utiles, cohérents et efficaces pour leur activité.",
+
+    backgroundIntro:
+      "Avant de me tourner complètement vers le web, j’ai travaillé pendant plus de 15 ans dans des environnements très différents (restauration haut-de-gamme, promotion immobilière, secteur médical). ",
+
+    backgroundConclusion:
+      "Ces expériences m’ont permis d’occuper des postes allant de l’opérationnel pur à la direction générale, et surtout de développer une vision globale du fonctionnement d’une entreprise, de ses contraintes et de ses priorités réelles.",
   },
-  image: "/images/about/profile.jpg", // À ajouter
+
+  expertise: {
+    title: "Ma double expertise technique et marketing",
+  
+    whatIDoIntro:
+      "Concrètement, cela signifie que je ne fais pas “juste un site” :",
+
+    whatIDo: [
+      "Accompagnement sur votre présence en ligne globale",
+      "Création ou optimisation de votre fiche Google Business",
+      "Amélioration de votre référencement naturel",
+      "Connexion et cohérence entre vos outils (réservation, réseaux sociaux, outils métiers)",
+      "Mise en place d’un positionnement clair et cohérent",
+    ],
+
+    reassurance:
+      "Si vous êtes un peu perdu face au web, aux outils, aux plateformes et aux obligations numériques, \nvous êtes exactement au bon endroit.",
+  },
+
+  approach: {
+    title: "Une approche orientée service et collaboration",
+    principle:
+      "Mon passé dans le service m’a appris une chose essentielle : ",
+    citation :  
+      "la technique n’a de valeur que si elle est utile et comprise.",
+
+    method:
+      "Je travaille dans une logique de collaboration, de pédagogie et de transparence. \nJe prends le temps d’expliquer, de conseiller et de proposer des solutions adaptées à VOTRE réalité, à votre budget et à vos objectifs, sans jargon inutile. \n\nVous restez propriétaire de tout le code vous concernant et je vous donne toutes les clés pour être autonome. \nAinsi, si demain vous souhaitez faire évoluer votre site ou changer de prestataire, vous en avez la liberté totale.",
+
+    goal:
+      "Mon objectif ?", 
+
+    goalSubtitle: 
+      "Que vous puissiez vous dire",
+
+    goalDescription:   
+      "« ouf, quelqu’un s’occupe de mon site… \net de tout le reste que je ne maîtrise pas ».",
+  },
+
+  image: "/images/about/profile.jpg",
 }
+
 
 // ============================================
 // TEXTES POUR LA PAGE CONTACT

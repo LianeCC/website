@@ -14,7 +14,7 @@ export function PricingPlans() {
     <section className="py-16 sm:py-24 md:py-40 text-white">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 px-4">Choisissez la formule adaptée à vos besoins</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 hidden sm:block sm:mb-4 px-4">Choisissez la formule adaptée à vos besoins</h2>
         </div>
 
         {/* Première ligne : 2 cards (Jeune Pousse + Floraison) */}

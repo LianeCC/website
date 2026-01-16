@@ -66,7 +66,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t text-center text-xs sm:text-sm text-muted-foreground">
+        <div className="pt-6 sm:pt-8 border-t text-center text-xs sm:text-sm text-muted-foreground">
           © {new Date().getFullYear()} {SITE_CONFIG.name}. Tous droits réservés.
         </div>
       </div>

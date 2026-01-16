@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 
-export function DarkGreenTransition() {
+export function LineTransition() {
   const [scrollProgress, setScrollProgress] = useState(0)
   const sectionRef = useRef<HTMLDivElement>(null)
 
@@ -27,8 +27,8 @@ export function DarkGreenTransition() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // La ligne diminue de 300px à 0px
-  const lineHeight = 300 * (1 - scrollProgress)
+  // La ligne diminue de 400px à 0px
+  const lineHeight = 400 * (1 - scrollProgress)
 
   return (
     <div ref={sectionRef} className="relative w-full" style={{ height: '400px' }}>
@@ -40,18 +40,7 @@ export function DarkGreenTransition() {
         />
       </div>
 
-      {/* Gradient fluide du transparent vers vert foncé */}
-      <div
-        className="absolute inset-0 transition-opacity duration-500"
-        style={{
-          background: `linear-gradient(to bottom,
-            transparent 0%,
-            rgba(8, 46, 33, ${scrollProgress * 0.2}) 20%,
-            rgba(8, 46, 33, ${scrollProgress * 0.5}) 40%,
-            rgba(8, 46, 33, ${scrollProgress * 0.8}) 70%,
-            rgb(8, 46, 33) 100%)`,
-        }}
-      />
+      
     </div>
   )
 }
